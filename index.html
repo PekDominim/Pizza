@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Pizzarendelés</h2>
+
+<form action="rendeles.php" method="post">
+
+  <fieldset>
+    <legend>Kapcsolat</legend>
+    <p>
+      <label for="nev" >Név *</label><br>
+      <input type="text" id="nev" name="nev" placeholder="Minta Péter" required>
+    </p>
+    <p>
+      <label for="email">E-mail</label><br>
+      <input type="email" id="email" name="email" placeholder="pelda@email.com">
+    </p>
+    <p>
+      <label for="tel">Telefon *</label><br>
+      <input type="tel" id="tel" name="telefon" placeholder="+36 30 123 4567" required>
+    </p>
+    <p>
+      <label for="cim">Szállítási cím *</label><br>
+      <input type="text" id="cim" name="cim" placeholder="1234 Budapest, Példa utca 12." required>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>A pizza</legend>
+    <p>
+      <label for="fajta">Fajta *</label><br>
+      <select id="fajta" name="fajta" required>
+        <option value="">-- válassz --</option>
+        <option value="margherita">Margherita</option>
+        <option value="sonkas">Sonkás</option>
+        <option value="negysajtos">Négysajtos</option>
+        <option value="hawaii">Hawaii</option>
+        <option value="vegetarian">Vegetáriánus</option>
+        <option value="bbq">BBQ csirkés</option>
+        <option value="tatai">Tatai</option>
+      </select>
+    </p>
+
+    <p><strong>Méret:</strong></p>
+    <p>
+      <input type="radio" id="m1" name="meret" value="26" checked>
+      <label for="m1">26 cm</label>
+      <input type="radio" id="m2" name="meret" value="32">
+      <label for="m2">32 cm</label>
+      <input type="radio" id="m3" name="meret" value="40">
+      <label for="m3">40 cm</label>
+    </p>
+
+    <p><strong>Extra feltét:</strong></p>
+    <p>
+      <input type="checkbox" id="f1" name="extra" value="sajt">
+      <label for="f1">Extra sajt</label>
+      <input type="checkbox" id="f2" name="extra" value="gomba">
+      <label for="f2">Gomba</label>
+      <input type="checkbox" id="f3" name="extra" value="oliva">
+      <label for="f3">Oliva</label>
+      <input type="checkbox" id="f4" name="extra" value="paprika">
+      <label for="f4">Paprika</label>
+      <input type="checkbox" id="f5" name="extra" value="fuszeres">
+      <label for="f5">Chili</label>
+    </p>
+
+    <p>
+      <label for="db">Darab *</label><br>
+      <input type="number" id="db" name="darab" value="1" min="1" max="20" required>
+    </p>
+
+    <p>
+      <label for="adag">Töltésmód</label><br>
+      <select id="adag" name="adag">
+        <option value="standard">Standard</option>
+        <option value="vastag">Vastag tésztán</option>
+        <option value="vékony">Vékony tésztán</option>
+        <option value="glutenmentes">Gluténmentes</option>
+      </select>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Szállítás és fizetés</legend>
+    <p>
+      <label for="szallitasi_mod">Szállítási mód *</label><br>
+      <select id="szallitasi_mod" name="szallitasi_mod" required>
+        <option value="">-- válassz --</option>
+        <option value="hazhozszallitas">Házhozszállítás</option>
+        <option value="pickup">Személyes átvétel</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="ido">Futárhoz időpont</label><br>
+      <input type="datetime-local" id="ido" name="idopont">
+    </p>
+
+    <p>
+      <label for="fizetes">Fizetési mód</label><br>
+      <select id="fizetes" name="fizetes">
+        <option value="bankkarty">Bankkártya</option>
+        <option value="keses">Készpénz</option>
+        <option value="szepkartya">SZÉP kártya</option>
+        <option value="utalas">Banki átutalás</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="kupon">Kuponkód</label><br>
+      <input type="text" id="kupon" name="kupon" placeholder="PIZZA10">
+    </p>
+  </fieldset>
+
+  <p>
+    <label for="megj">Megjegyzés</label><br>
+    <textarea id="megj" name="megjegyzes" rows="4" cols="40" placeholder="Külön kérés, allergén információ, étel kivétel..."></textarea>
+  </p>
+
+  <p>
+    <input type="checkbox" id="aszf" name="aszf" value="elfogadva" required>
+    <label for="aszf">Elfogadom a feltételeket *</label>
+  </p>
+
+  <p>
+    <input type="checkbox" id="hirlevel" name="hirlevel" value="igen">
+    <label for="hirlevel">Kérek akciós hírlevelet</label>
+  </p>
+
+  <button type="submit">Megrendelem</button>
+  <button type="reset">Újra</button>
+</form>
+</body>
+</html>

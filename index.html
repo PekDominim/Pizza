@@ -8,7 +8,7 @@
 <body>
   <h2>Pizzarendelés</h2>
 
-<form action="rendeles.php" method="post">
+<form action="https://httpbin.org/post" method="post">
 
   <fieldset>
     <legend>Kapcsolat</legend>
@@ -22,7 +22,7 @@
     </p>
     <p>
       <label for="tel">Telefon *</label><br>
-      <input type="tel" id="tel" name="telefon" placeholder="+36 30 123 4567" required>
+      <input type="tel" id="tel" name="telefon" placeholder="+36 69 420 8008" required>
     </p>
     <p>
       <label for="cim">Szállítási cím *</label><br>
@@ -76,8 +76,8 @@
     </p>
 
     <p>
-      <label for="adag">Töltésmód</label><br>
-      <select id="adag" name="adag">
+      <label for="teszta">Tésztatípus</label><br>
+      <select id="teszta" name="teszta">
         <option value="standard">Standard</option>
         <option value="vastag">Vastag tésztán</option>
         <option value="vékony">Vékony tésztán</option>
@@ -105,8 +105,8 @@
     <p>
       <label for="fizetes">Fizetési mód</label><br>
       <select id="fizetes" name="fizetes">
-        <option value="bankkarty">Bankkártya</option>
-        <option value="keses">Készpénz</option>
+        <option value="bankkartya">Bankkártya</option>
+        <option value="keszpenz">Készpénz</option>
         <option value="szepkartya">SZÉP kártya</option>
         <option value="utalas">Banki átutalás</option>
       </select>
@@ -120,7 +120,7 @@
 
   <p>
     <label for="megj">Megjegyzés</label><br>
-    <textarea id="megj" name="megjegyzes" rows="4" cols="40" placeholder="Külön kérés, allergén információ, étel kivétel..."></textarea>
+    <textarea id="megj" name="megjegyzes" rows="4" cols="40" placeholder="Üzenet a futárnak, ételalergia..."></textarea>
   </p>
 
   <p>
